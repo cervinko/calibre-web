@@ -793,7 +793,7 @@ def login():
         else:
             flash(_(u"Wrong Username or Password"), category="error")
 
-    return render_template('login.html', title=_(u"login"))
+    return render_template('login.html', showrandom=current_user.show_random_books(), title=_(u"login"))
 
 @app.route('/logout')
 @login_required
